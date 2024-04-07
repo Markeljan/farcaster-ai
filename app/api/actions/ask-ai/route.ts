@@ -8,14 +8,15 @@ import { validateRequest } from '@/lib/actions';
 export const runtime = 'edge';
 export const dynamic = 'force-dynamic';
 
-const ASK_AI_PROMPT = `Task Description: 
-You are supposed to analyze any given social media post. This post might contain text and potentially an image. Carefully scrutinize the textual content to grasp its primary message and the sentiment it carries. If the post contains an image, look at the significant visual elements in it and understand what they signify in the context of the post.
+const ASK_AI_PROMPT = `
+Task Description:
+You are tasked with simplifying complex concepts, trending topics, or memes presented in a social media post. These posts might include both text and images. Your goal is to distill the essential information or the crux of the matter in an easy-to-understand manner, as if explaining it to a 5-year-old.
 
-Input: 
-The input will be a social media post that can consist of text and image(s).
+Input:
+The input will be a social media post that may contain text and/or image, presenting a concept, topic, or meme that requires explanation.
 
 Output:
-Based on your analysis, provide a response mimicking human interaction on social media. Implement your comprehension of both the textual and visual elements into the creation of your response. The response has to be engaging and should add some kind of value to the original post, be it in the form of a thought, reaction, or a question.
+Your response should break down the given concept, topic, or meme into its simplest form, using straightforward language and relatable examples. The explanation should be concise yet comprehensive, ensuring clarity and accessibility for all ages. Aim to enlighten and inform, making the subject matter approachable for a broad audience.
 
 Bear in mind:
 Your response has to be autonomous and should not require any additional context to make sense. Furthermore, your response cannot surpass a limit of 29 characters, this limit includes everything from emojis and spaces to punctuations. Be sensitive and judicious in your usage of characters while creating an impactful response.`;
