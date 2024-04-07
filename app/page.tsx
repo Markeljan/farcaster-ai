@@ -22,7 +22,8 @@ const frameMetadata = getFrameMetadata({
     },
   ],
   image: {
-    src: `${APP_URL}/ask-ai.png`,
+    src: `${APP_URL}/ask-ai.gif`,
+    aspectRatio: '1:1',
   },
 });
 
