@@ -1,4 +1,4 @@
-import { agi } from '@/app/config';
+import { agi } from '@/lib/config';
 
 export const getCompletionWithFallback = async (
   systemMessage: string,

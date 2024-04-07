@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { FrameRequest } from '@coinbase/onchainkit/frame';
-import { neynar } from '@/app/config';
-import { validateRequest } from '@/app/actions';
-import { getImageUrlFromCast } from '@/app/utils';
-import { getCompletionWithFallback } from '@/app/agi';
+import { neynar } from '@/lib/config';
+import { validateRequest } from '@/lib/actions';
+import { getImageUrlFromCast } from '@/lib/utils';
+import { getCompletionWithFallback } from '@/lib/agi';
 
 export const runtime = 'edge';
 export const dynamic = 'force-dynamic';

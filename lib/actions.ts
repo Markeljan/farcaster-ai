@@ -1,5 +1,5 @@
 import { FrameRequest, MockFrameRequest, getFrameMessage } from '@coinbase/onchainkit';
-import { MARKELJAN_FID, neynar } from '@/app/config';
+import { MARKELJAN_FID, neynar } from '@/lib/config';
 
 export const validateRequest = async (body: FrameRequest | MockFrameRequest) => {
   const { isValid, message } = await getFrameMessage(body, {

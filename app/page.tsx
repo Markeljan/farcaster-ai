@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { getFrameMetadata } from '@coinbase/onchainkit/frame';
-import { buildAddActionUrl } from '@/app/utils';
-import { APP_URL } from '@/app/config';
+import { buildAddActionUrl } from '@/lib/utils';
+import { APP_URL } from '@/lib/config';
 
 const frameMetadata = getFrameMetadata({
   buttons: [
