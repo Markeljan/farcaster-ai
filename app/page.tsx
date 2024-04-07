@@ -27,10 +27,10 @@ const frameMetadata = getFrameMetadata({
 });
 
 export const metadata: Metadata = {
-  title: 'Ask AI Farcaster Actions',
+  title: 'Farcaster AI',
   description: 'Farcaster actions for AI sentiment analysis, ELI5, and more',
   openGraph: {
-    title: 'Ask AI Farcaster Actions',
+    title: 'Farcaster AI',
     description: 'Farcaster actions for AI sentiment analysis, ELI5, and more',
     images: [`${APP_URL}/ask-ai.png`],
   },
