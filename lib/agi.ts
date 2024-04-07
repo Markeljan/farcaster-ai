@@ -39,9 +39,7 @@ export const createCompletetion = async (
     model: model,
     temperature: 0.8,
   });
-  const text = completion.choices[0].message.content?.replace(/['"]+/g, '');
-
-  return text;
+  return completion.choices[0].message.content?.replace(/['"]+/g, '');
 };
 
 export const createCompletetionWithImageUrl = async (
@@ -70,7 +68,5 @@ export const createCompletetionWithImageUrl = async (
     temperature: 0.8,
   });
 
-  const text = completion.choices[0].message.content;
-
-  return text;
+  return completion.choices[0].message.content?.replace(/['"]+/g, '');
 };
