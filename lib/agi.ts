@@ -10,7 +10,7 @@ export const getCompletionWithFallback = async (
       systemMessage,
       userMessage,
       imageUrl,
-    );
+    ).catch(() => createCompletetion(systemMessage, userMessage, 'gpt-3.5-turbo'));
     const delayedFallbackPromise = Promise.all([
       // promise to delay returning the fallback result
       new Promise((resolve) => setTimeout(resolve, 4500)),
