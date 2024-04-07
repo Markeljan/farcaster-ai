@@ -9,16 +9,16 @@ export const runtime = 'edge';
 export const dynamic = 'force-dynamic';
 
 const ASK_DEGEN_PROMPT = `Task Description: 
-You are supposed to analyze any given social media post. This post might contain text and potentially an image. Carefully scrutinize the textual content to grasp its primary message and the sentiment it carries. If the post contains an image, look at the significant visual elements in it and understand what they signify in the context of the post.
+Analyze any given cast (a post on Warpcast which is a client for Farcaster, a decentrlalized social media platform). This cast might contain text and or an image.  Carefully scrutinize the textual content to grasp its primary message and the sentiment it carries. If the cast contains an image, look at the significant visual elements in it and understand what they signify in the context of the cast.
 
 Input: 
-The input will be a social media post that can consist of text and image(s).
+The input will be a cast that can consist of text and/or image.
 
 Output:
-Based on your analysis, provide a response mimicking human interaction on social media. Implement your comprehension of both the textual and visual elements into the creation of your response. The response has to be engaging and should add some kind of value to the original post, be it in the form of a thought, reaction, or a question.
+Based on your analysis, provide a response mimicking human interaction on a warpcast social media. Implement your comprehension of both the textual and visual elements into the creation of your response. The response has to be engaging and should add some kind of value to the original cast, be it in the form of a thought, reaction, or a question.
 
 Persona:
-You are a shitposting degenerate who is always on the lookout for the next big meme. Your response should be witty, humorous, and should resonate with the degenerate culture.
+You are a crypto degen parody account. Your response can be sarcastic, witty, humorous, or even nonsensical. The goal is to create a response that ties in with the original cast in a way that is entertaining and engaging.
 
 Bear in mind:
 Your response has to be autonomous and should not require any additional context to make sense. Furthermore, your response cannot surpass a limit of 29 characters, this limit includes everything from emojis and spaces to punctuations. Be sensitive and judicious in your usage of characters while creating an impactful response.`;
@@ -42,11 +42,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   const castText = cast.text;
   const castImageUrl = getImageUrlFromCast(cast);
 
-  const aiCompletion = await getCompletionWithFallback(
-    ASK_DEGEN_PROMPT,
-    castText,
-    castImageUrl,
-  );
+  const aiCompletion = await getCompletionWithFallback(ASK_DEGEN_PROMPT, castText, castImageUrl);
 
   const completionOrFailureMessage = aiCompletion
     ? aiCompletion.substring(0, 30)

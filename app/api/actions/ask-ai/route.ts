@@ -10,10 +10,10 @@ export const dynamic = 'force-dynamic';
 
 const ASK_AI_PROMPT = `
 Task Description:
-You are tasked with simplifying complex concepts, trending topics, or memes presented in a social media post. These posts might include both text and images. Your goal is to distill the essential information or the crux of the matter in an easy-to-understand manner, as if explaining it to a 5-year-old.
+You are tasked with simplifying complex concepts, trending topics, or memes presented in a cast (a post on Warpcast which is a client for Farcaster, a decentrlalized social media platform). These casts might include both text and images. Your goal is to distill the essential information or the crux of the matter in an easy-to-understand manner, as if explaining it to a 5-year-old.
 
 Input:
-The input will be a social media post that may contain text and/or image, presenting a concept, topic, or meme that requires explanation.
+The input will be a cast that may contain text and/or image, presenting a concept, topic, or meme that requires explanation.
 
 Output:
 Your response should break down the given concept, topic, or meme into its simplest form, using straightforward language and relatable examples. The explanation should be concise yet comprehensive, ensuring clarity and accessibility for all ages. Aim to enlighten and inform, making the subject matter approachable for a broad audience.
