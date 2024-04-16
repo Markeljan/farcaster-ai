@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { getFrameMetadata } from '@coinbase/onchainkit/frame';
-import { buildAddActionUrl } from '@/lib/utils';
-import { APP_URL } from '@/lib/config';
+import { buildAddActionUrl } from '@/app/utils';
+import { APP_URL } from '@/app/config';
 
 const frameMetadata = getFrameMetadata({
   buttons: [
@@ -13,27 +13,26 @@ const frameMetadata = getFrameMetadata({
     {
       action: 'link',
       label: 'Add Ask 🤖',
-      target: buildAddActionUrl('Ask 🤖', 'dependabot', `${APP_URL}/api/actions/ask-ai`),
+      target: buildAddActionUrl('Ask 🤖', 'dependabot', `${APP_URL}/api/actions/copilot`),
     },
     {
       action: 'link',
       label: 'Add Ask 😈',
-      target: buildAddActionUrl('Ask 😈', 'dependabot', `${APP_URL}/api/actions/ask-degen`),
+      target: buildAddActionUrl('Ask 😈', 'dependabot', `${APP_URL}/api/actions/copilot-degen`),
     },
   ],
   image: {
-    src: `${APP_URL}/ask-ai.gif`,
-    aspectRatio: '1:1',
+    src: `${APP_URL}/copilot.png`,
   },
 });
 
 export const metadata: Metadata = {
-  title: 'Farcaster AI',
+  title: 'AI Farcaster Actions',
   description: 'Farcaster actions for AI sentiment analysis, ELI5, and more',
   openGraph: {
-    title: 'Farcaster AI',
+    title: 'AI Farcaster Actions',
     description: 'Farcaster actions for AI sentiment analysis, ELI5, and more',
-    images: [`${APP_URL}/ask-ai.png`],
+    images: [`${APP_URL}/copilot.png`],
   },
   other: {
     ...frameMetadata,
@@ -44,7 +43,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <img src={`${APP_URL}/ask-ai.png`} alt="Ask AI" width={200} height={200} />
+      <img src={`${APP_URL}/copilot.png`} alt="AI Farcaster Actions" width={200} height={200} />
       <a
         href={buildAddActionUrl('ELI5', 'dependabot', `${APP_URL}/api/actions/summary`)}
         target="_blank"
@@ -53,20 +52,25 @@ export default function Page() {
         Add ELI5
       </a>
       <a
-        href={buildAddActionUrl('Ask 🤖', 'dependabot', `${APP_URL}/api/actions/ask-ai`)}
+        href={buildAddActionUrl('Ask 🤖', 'dependabot', `${APP_URL}/api/actions/copilot`)}
         target="_blank"
         rel="noopener noreferrer"
       >
         Add Ask 🤖
       </a>
       <a
-        href={buildAddActionUrl('Ask 😈', 'dependabot', `${APP_URL}/api/actions/ask-degen`)}
+        href={buildAddActionUrl('Ask 😈', 'dependabot', `${APP_URL}/api/actions/copilot-degen`)}
         target="_blank"
         rel="noopener noreferrer"
       >
         Add Ask 😈
       </a>
-      <img src={`${APP_URL}/ask-degen.png`} alt="Ask Degen" width={200} height={200} />
+      <img
+        src={`${APP_URL}/copilot-degen.png`}
+        alt="AI Farcaster Actions"
+        width={200}
+        height={200}
+      />
     </>
   );
 }
