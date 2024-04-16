@@ -1,12 +1,10 @@
 {
-  "name": "farcaster-agi",
-  "version": "0.11.0",
+  "name": "ask-ai",
+  "version": "0.1.0",
   "scripts": {
-    "build": "rm -rf .next && next build",
     "dev": "next dev",
-    "format": "prettier --log-level warn --write .",
-    "start": "next start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "next build",
+    "start": "next start"
   },
   "keywords": [],
   "author": "https://github.com/markeljan",
@@ -14,7 +12,7 @@
   "dependencies": {
     "@coinbase/onchainkit": "0.11.0",
     "@neynar/nodejs-sdk": "^1.15.0",
-    "next": "^14.2.1",
+    "next": "^14.1.4",
     "openai": "^4.33.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
