@@ -2,7 +2,7 @@
 
 This project provides an installable action for the Farcaster network, designed to analyze social media posts both textually and visually, and generate concise, engaging responses.
 
-![image](https://github.com/Markeljan/farcaster-ai/assets/12901349/6de6bd95-71c9-4ac4-9ba8-ca2ab4067351)
+[<img src="https://github.com/Markeljan/farcaster-ai/assets/12901349/6de6bd95-71c9-4ac4-9ba8-ca2ab4067351">](https://warpcast.com/markeljan/0xfeb98799),
 
 
 # Install
